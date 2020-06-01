@@ -6,7 +6,7 @@ services:
     environment:
       - MYSQL_DATABASE=wordpress
       - MYSQL_USER=wordpress
-      - MYSQL_PASSWORD=iekalj4h2e3hi
+      - MYSQL_PASSWORD=changeme
       - MYSQL_RANDOM_ROOT_PASSWORD=yes
     networks:
       - default
@@ -15,7 +15,10 @@ services:
     environment:
       - MYSQL_DATABASE=wordpress
       - MYSQL_USER=wordpress
-      - MYSQL_PASSWORD=iekalj4h2e3hi
+      - MYSQL_PASSWORD=changeme
+    volumes:
+      - ./themes:/var/www/html/wp-content/themes
+      # - ./plugins:/var/www/html/wp-content/plugins
     ports:
       - "8000:80"
     depends_on:
