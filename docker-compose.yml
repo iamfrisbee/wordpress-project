@@ -8,6 +8,8 @@ services:
       - MYSQL_USER=wordpress
       - MYSQL_PASSWORD=changeme
       - MYSQL_RANDOM_ROOT_PASSWORD=yes
+    volumes:
+      # - ./db.sql:/docker-entrypoint-initdb.d/init.sql
     networks:
       - default
   web:
@@ -19,6 +21,7 @@ services:
     volumes:
       - ./themes:/var/www/html/wp-content/themes
       # - ./plugins:/var/www/html/wp-content/plugins
+      # - ./uploads:/var/www/html/wp-content/uploads
     ports:
       - "8000:80"
     depends_on:
