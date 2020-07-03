@@ -8,8 +8,8 @@ services:
       - MYSQL_USER=wordpress
       - MYSQL_PASSWORD=changeme
       - MYSQL_RANDOM_ROOT_PASSWORD=yes
-    volumes:
-      # - ./db.sql:/docker-entrypoint-initdb.d/init.sql
+    # volumes:
+    # - ./db.sql:/docker-entrypoint-initdb.d/init.sql
     networks:
       - default
   web:
