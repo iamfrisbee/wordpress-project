@@ -18,12 +18,13 @@ services:
       - MYSQL_DATABASE=wordpress
       - MYSQL_USER=wordpress
       - MYSQL_PASSWORD=changeme
+      - PORT=8000
     volumes:
       - ./themes:/var/www/html/wp-content/themes
       # - ./plugins:/var/www/html/wp-content/plugins
       # - ./uploads:/var/www/html/wp-content/uploads
     ports:
-      - "8000:80"
+      - "8000:8000"
     depends_on:
       - db
     networks:
