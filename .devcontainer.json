@@ -1,0 +1,11 @@
+{
+  "name": "Wordpress Development",
+  "dockerComposeFile": [
+    "./docker-compose.yml"
+  ],
+  "service": "web",
+  "workspaceFolder": "/opt/app",
+  "forwardPorts": [
+    8000
+  ]
+}

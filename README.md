@@ -2,11 +2,11 @@
 
 The idea is that one would use this repository as a jumping off point for WordPress development. Basically you clone or fork the repo. Set the appropriate environment variables or modify the docker-compose.yml file and run `docker-compose up` to start your docker servers to host your WordPress project in.
 
-The site runs by default on [http://localhost:8000](http://localhost:8000). Change lines 21 and 27 to adjust the port number.
+The site runs by default on [http://localhost:8000](http://localhost:8000).
 
 ## Restore a WP Website
 
-First, place database script in the root of the project with the name db.sql and uncomment lines 11 and 12 in docker-compose.yml. Make sure the db.sql file starts with a use command with the database name from line 7.
+First, place database script in the db directory and uncomment lines 10 in docker-compose.yml. Make sure the `.sql` file starts with a use command with the database name from the `env` file.
 
 ```bash
 USE wordpress;
